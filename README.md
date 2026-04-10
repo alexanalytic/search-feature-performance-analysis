@@ -1,5 +1,5 @@
 # 🔍 Search Feature Performance Analysis (SQL Case Study)
-
+**Goal:** Evaluate search performance and identify opportunities to improve ranking quality and user engagement.
 ## 📌 Business Problem
 
 Search is a critical feature for product discovery. Poor search performance can lead to user frustration, reduced engagement, and lost revenue.

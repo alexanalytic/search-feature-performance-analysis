@@ -159,18 +159,18 @@ ORDER BY sr.position;
 
 ## 🧠 Skills Demonstrated
 
-* SQL (joins, aggregations, case logic)
-* Product analytics thinking
+* SQL (joins, aggregations, conditional logic)
+* Product and behavioral analytics
 * Funnel and engagement analysis
-* Data storytelling
-* Business recommendations
+* Data storytelling and insight generation
+* Translating data into business recommendations
 
 ---
 
 ## 🚀 Next Steps
 
-* Build dashboard visualization (Tableau / Power BI)
-* Track query reformulation behavior
-* Implement A/B testing for ranking improvements
+* Develop dashboard visualizations (Tableau / Power BI)
+* Analyze query refinement behavior
+* Design A/B testing framework for ranking improvements
 
 ---

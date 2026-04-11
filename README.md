@@ -2,9 +2,10 @@
 **Goal:** Evaluate search performance and identify opportunities to improve ranking quality and user engagement.
 ## 📌 Business Problem
 
+
 Search is a critical feature for product discovery. Poor search performance can lead to user frustration, reduced engagement, and lost revenue.
 
-This analysis evaluates search performance to identify issues in:
+This analysis evaluates search performance across:
 
 * user engagement
 * ranking quality
@@ -13,6 +14,7 @@ This analysis evaluates search performance to identify issues in:
 ---
 
 ## 📊 Dataset Overview
+
 
 The dataset simulates user interaction with a product search feature and includes:
 
@@ -23,14 +25,15 @@ The dataset simulates user interaction with a product search feature and include
 
 Tables:
 
-* `searches` —> user queries and metadata
-* `search_results` —> ranked results per search
-* `clicks` —> user interactions
-* `users` —> user segmentation data
+* `searches` → user queries and metadata
+* `search_results` → ranked results per search
+* `clicks` → user interactions
+* `users` → user segmentation data
 
 ---
 
 ## 📈 Key Metrics
+
 
 ### Overall Search Engagement
 
@@ -134,13 +137,15 @@ ORDER BY ctr_rank, query;
 **Result:**
 
 <img width="449" height="750" alt="image" src="https://github.com/user-attachments/assets/56ae5cad-ad71-4929-8e29-263bc5c1ff09" />
+<br>
+<img width="452" height="105" alt="image" src="https://github.com/user-attachments/assets/bbefa361-5186-4880-b432-f1162e61256e" />
 
 
 **Key Takeaways:**
 * Queries show significant variation in CTR, highlighting differences in user intent and result relevance  
 * Ranking queries using a window function enables quick identification of top- and low-performing search terms  
-* Low-performing queries represent clear opportunities to improve search relevance and query handling  
-
+* Low-performing queries represent clear opportunities to improve search relevance and query handling 
+   → Example: *xyz product* ranks among the lowest-performing queries, reinforcing earlier findings on poor query relevance
 ---
 
 ## 🔍 Key Insights
@@ -212,10 +217,9 @@ ORDER BY ctr_rank, query;
 
 ## 🧠 Analytical Approach
 
-* SQL (joins, aggregations, conditional logic)
-* Product and behavioral analytics
-* Funnel and engagement analysis
-* Data storytelling and insight generation
-* Translating data into business recommendations
+* SQL-based aggregation and joins across multiple tables  
+* Query-level and position-level performance analysis 
+* ser segmentation and behavioral insights  
+* Translation of data into actionable business recommendations 
 
 ---

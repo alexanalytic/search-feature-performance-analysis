@@ -103,6 +103,44 @@ ORDER BY sr.position;
 * **Position 1 CTR: 31.86%**
 * **Position 2 CTR: 37.49%** (highest)
 * **Positions 6–10: ~0%** engagement
+
+### Query CTR Ranking
+
+```sql
+WITH query_ctr AS (
+    SELECT
+        s.query,
+        COUNT(DISTINCT s.search_id) AS searches,
+        COUNT(DISTINCT c.search_id) AS searches_with_click,
+        ROUND(
+            100.0 * COUNT(DISTINCT c.search_id) / COUNT(DISTINCT s.search_id),
+            2
+        ) AS ctr_pct
+    FROM searches s
+    LEFT JOIN clicks c
+        ON s.search_id = c.search_id
+    GROUP BY s.query
+    HAVING COUNT(DISTINCT s.search_id) >= 10
+)
+SELECT
+    query,
+    searches,
+    searches_with_click,
+    ctr_pct,
+    RANK() OVER (ORDER BY ctr_pct DESC) AS ctr_rank
+FROM query_ctr
+ORDER BY ctr_rank, query;
+```
+**Result:**
+
+<img width="449" height="750" alt="image" src="https://github.com/user-attachments/assets/56ae5cad-ad71-4929-8e29-263bc5c1ff09" />
+
+
+**Key Takeaways:**
+* Queries show significant variation in CTR, highlighting differences in user intent and result relevance  
+* Ranking queries using a window function enables quick identification of top- and low-performing search terms  
+* Low-performing queries represent clear opportunities to improve search relevance and query handling  
+
 ---
 
 ## 🔍 Key Insights

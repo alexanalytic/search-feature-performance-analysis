@@ -172,20 +172,12 @@ ORDER BY sr.position;
 
 ---
 
-## 🧠 Skills Demonstrated
+## 🧠 Analytical Approach
 
 * SQL (joins, aggregations, conditional logic)
 * Product and behavioral analytics
 * Funnel and engagement analysis
 * Data storytelling and insight generation
 * Translating data into business recommendations
-
----
-
-## 🚀 Next Steps
-
-* Develop dashboard visualizations (Tableau / Power BI)
-* Analyze query refinement behavior
-* Design A/B testing framework for ranking improvements
 
 ---

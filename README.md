@@ -23,10 +23,10 @@ The dataset simulates user interaction with a product search feature and include
 
 Tables:
 
-* `searches` — user queries and metadata
-* `search_results` — ranked results per search
-* `clicks` — user interactions
-* `users` — user segmentation data
+* `searches` —> user queries and metadata
+* `search_results` —> ranked results per search
+* `clicks` —> user interactions
+* `users` —> user segmentation data
 
 ---
 

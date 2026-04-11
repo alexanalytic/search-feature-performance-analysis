@@ -100,7 +100,9 @@ ORDER BY sr.position;
 
 <img width="231" height="285" alt="image" src="https://github.com/user-attachments/assets/c419b28e-dbab-493c-9e86-c42098025dd4" />
 
-
+* **Position 1 CTR: 31.86%**
+* **Position 2 CTR: 37.49%** (highest)
+* **Positions 6–10: ~0%** engagement
 ---
 
 ## 🔍 Key Insights

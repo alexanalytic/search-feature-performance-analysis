@@ -46,6 +46,11 @@ FROM searches s
 LEFT JOIN clicks c
     ON s.search_id = c.search_id;
 ```
+**Result:**
+
+<img width="269" height="51" alt="image" src="https://github.com/user-attachments/assets/b10705e4-1ef3-464f-9839-3b297dbea184" />
+
+
 
 * **CTR: 67.17%**
 * ~33% of searches result in no clicks
@@ -67,6 +72,10 @@ FROM searches s
 LEFT JOIN clicks c
     ON s.search_id = c.search_id;
 ```
+**Result:**
+
+<img width="369" height="51" alt="image" src="https://github.com/user-attachments/assets/8201d7b8-f360-455d-835c-829ec5b2fd67" />
+
 
 * **Abandonment Rate: 32.83%**
 
@@ -87,6 +96,10 @@ LEFT JOIN clicks c
 GROUP BY sr.position
 ORDER BY sr.position;
 ```
+**Result:**
+
+<img width="231" height="285" alt="image" src="https://github.com/user-attachments/assets/c419b28e-dbab-493c-9e86-c42098025dd4" />
+
 
 ---
 

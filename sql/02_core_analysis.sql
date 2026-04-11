@@ -78,3 +78,30 @@ JOIN users u
 LEFT JOIN clicks c
     ON s.search_id = c.search_id
 GROUP BY u.user_type;
+
+-- Query CTR ranking using CTE + window function
+WITH query_ctr AS (
+    SELECT
+        s.query,
+        COUNT(DISTINCT s.search_id) AS searches,
+        COUNT(DISTINCT c.search_id) AS searches_with_click,
+        ROUND(
+            100.0 * COUNT(DISTINCT c.search_id) / COUNT(DISTINCT s.search_id),
+            2
+        ) AS ctr_pct
+    FROM searches s
+    LEFT JOIN clicks c
+        ON s.search_id = c.search_id
+    GROUP BY s.query
+    HAVING COUNT(DISTINCT s.search_id) >= 10
+)
+SELECT
+    query,
+    searches,
+    searches_with_click,
+    ctr_pct,
+    RANK() OVER (ORDER BY ctr_pct DESC) AS ctr_rank
+FROM query_ctr
+ORDER BY ctr_rank, query;
+
+
